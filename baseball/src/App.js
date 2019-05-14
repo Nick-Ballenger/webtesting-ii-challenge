@@ -7,7 +7,8 @@ class App extends Component {
   state = {
     player:'JimBob',
     balls:0,
-    strikes:0
+    strikes:0,
+    fouls:0
   }
  //reset logic
   resetHandler = e => {
