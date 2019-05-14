@@ -19,3 +19,19 @@ import Display from "./display";
     expect(strikes).toHaveTextContent(/Strikes/i);
   });
 });
+describe("<Display/>", () => {
+    it("renders display", () => {
+      const testState = {
+        player: "piddles",
+        balls: 3,
+        strikes: 1
+      };
+      const { getByTestID } = render(<Display atBat={testState} />);
+      const player = getByTestID(/player/i);
+      const balls = getByTestID(/balls/i);
+      const strikes = getByTestID(/strikes/i);
+      expect(player).toHaveTextContent(/piddles/i);
+      expect(balls).toHaveTextContent(/3/i);
+      expect(strikes).toHaveTextContent(/1/i);
+    });
+  });
