@@ -2,7 +2,6 @@ import React from "react";
 import { render, fireEvent } from "react-testing-library";
 import "jest-dom/extend-expect";
 import Dashboard from "./dashboard";
-import 'react-testing-library/cleanup-after-each';
 
 
 describe("<Dashboard/>", () => {
