@@ -6,7 +6,7 @@ import React from 'react'
         const { player, balls, strikes, fouls } = props.atBat;
         return (
           <div className="Display stuffs">
-            <li data-testid="player">At-bat: {player}</li>
+            <li data-testid="player">BatterUp: {player}</li>
             <li data-testid="balls">Balls: {balls}</li>
             <li data-testid="strikes">Strikes: {strikes}</li>
             <li data-testid="fouls">Fouls: {fouls}</li>

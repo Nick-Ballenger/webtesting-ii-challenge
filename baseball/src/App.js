@@ -51,7 +51,22 @@ ballhandler = e => {
     });
   } else this.handleReset(e);
 };
+render(){
+  return(
+    <div className="app-wrapper">
+    <Display reset={this.resetHandler} BatterUP={this.state}/>
+    <Dashboard
+            ball={this.ballhandler}
+            strike={this.strikeHandler}
+            foul={this.foulHandler}
+            hit={this.hitHandler}
+          />
+
+    </div>
+  )
+}
 };
+
 
 
 
