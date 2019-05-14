@@ -3,7 +3,7 @@ import React, { Component } from "react";import './App.css';
 import Dashboard from'./dashboard/dashboard'
 import Display from './display/display'
 
-class App extends Component() {
+class App extends Component {
   state = {
     player:'JimBob',
     balls:0,
@@ -49,18 +49,22 @@ ballhandler = e => {
     this.setState(prevState => {
       return { balls: prevState.balls + 1 };
     });
-  } else this.handleReset(e);
+  } else this.resetHandler(e);
 };
 render(){
   return(
     <div className="app-wrapper">
-    <Display reset={this.resetHandler} BatterUP={this.state}/>
+    <header>
+    <Display reset={this.resetHandler} BatterUp={this.state}/>
     <Dashboard
             ball={this.ballhandler}
             strike={this.strikeHandler}
             foul={this.foulHandler}
             hit={this.hitHandler}
           />
+
+    </header>
+   
 
     </div>
   )

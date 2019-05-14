@@ -3,7 +3,7 @@ import React from 'react'
 
 
     const Display = props => {
-        const { player, balls, strikes, fouls } = props.atBat;
+        const { player, balls, strikes, fouls } = props.BatterUp;
         return (
           <div className="Display stuffs">
             <li data-testid="player">BatterUp: {player}</li>
