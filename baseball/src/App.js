@@ -32,9 +32,28 @@ else{
   this.resetHandler(e)
 }
   }
-};
 
 //foul logic
+foulHandler = e => {
+  if (this.state.strikes < 2) {
+    this.setState(prevState => {
+      return { strikes: prevState.strikes + 1 };
+    });
+  }
+};
+
+//Ball logic
+
+ballhandler = e => {
+  if (this.state.balls < 3) {
+    this.setState(prevState => {
+      return { balls: prevState.balls + 1 };
+    });
+  } else this.handleReset(e);
+};
+};
+
+
 
 
 
