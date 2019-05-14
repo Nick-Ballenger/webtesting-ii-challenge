@@ -1,5 +1,4 @@
 import React from 'react'
-import 'react-testing-library/cleanup-after-each';
 
 
 const Dashboard = props =>{

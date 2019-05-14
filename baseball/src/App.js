@@ -2,7 +2,6 @@ import React, { Component } from "react";import './App.css';
 
 import Dashboard from'./dashboard/dashboard'
 import Display from './display/display'
-import 'react-testing-library/cleanup-after-each';
 
 class App extends Component {
   state = {
